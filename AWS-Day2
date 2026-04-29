@@ -1,0 +1,3 @@
+Tasks statement: create a security group for inbound rules for http and ssh
+
+Solution: Go to VPC- Security - Security groups - Create new security group - Add name & description - Select the relevant vpc - Edit inbound rules - Save
