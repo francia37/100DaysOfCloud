@@ -1,0 +1,2 @@
+Task: create a versionning on S3 bucket
+Solution: Go to the bucket - Permission - Bucket versionning - Enable - Save
