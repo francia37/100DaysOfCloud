@@ -1,2 +1,2 @@
-Task: create a SSH key pair
+Task: create a SSH key pair 
 Solution: Search SSH Key pair - create new ssh key pair - add subscription/ressource group/region - choose type - generate or use existing - review and create
