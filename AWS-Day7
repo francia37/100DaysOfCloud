@@ -1,4 +1,4 @@
-Task:  Change the instance type from t2.micro to t2.nano for xfusion-ec2 instance.
+Task:  Change the instance type from t2.micro to t2.nano for xfusion-ec2 instance. 
 Solution: 
 Go to EC2 - Edit the EC2 instance
 1) Change the instance type from t2.micro to t2.nano for xfusion-ec2 instance (change the state to stop first)
