@@ -1,2 +1,3 @@
 Task: create a volume type gp3
 Solution: EC2 - EBS - volume - Create a new volume - Edit name after that
+ 
