@@ -1,3 +1,3 @@
 Task: Enable termination protection 
 Solution: 
-EC2 - select the instance - Actions - instance setting - change termination protection
+EC2 - select the instance - Actions - instance setting - change termination protection 
