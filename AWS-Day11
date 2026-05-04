@@ -1,2 +1,2 @@
 Task: Attach the datacenter-eni network interface to the datacenter-ec2 instance.
-Solution: EC2 - Select EC2 instance - Actions - Networking - Attach network interface
+Solution: EC2 - Select EC2 instance - Actions - Networking - Attach network interface.
