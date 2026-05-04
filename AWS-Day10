@@ -1,0 +1,3 @@
+Task: There is an instance named nautilus-ec2 and an elastic-ip named nautilus-ec2-eip in us-east-1 region. Attach the nautilus-ec2-eip elastic-ip to the nautilus-ec2 instance.
+Solution: 
+EC2 - Elastic IP - Associate - Select the relevant EC2 instance
