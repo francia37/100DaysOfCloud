@@ -1,0 +1,18 @@
+Task: Create Azure VM using Azure cli
+Solution: 
+1) check resource group: az group list --output table
+2) create VM: az vm create \
+  --resource-group kml_rg_main-403eb35cc1c3424d \
+  --name nautilus-vm \
+  --image Ubuntu2204 \
+  --size Standard_B2s \
+  --admin-username azureuser \
+  --generate-ssh-keys \
+  --storage-sku Standard_LRS \
+  --os-disk-size-gb 30
+3) verify state: az vm show \
+  --resource-group kml_rg_main-403eb35cc1c3424d \
+  --name nautilus-vm \
+  --show-details \
+  --query powerState
+
