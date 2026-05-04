@@ -1,2 +1,2 @@
-Task statement: Create a Key Pair
+Task statement: Create a Key Pair 
 Solution: Go to EC2 - Network Security - Key Pair - Create new Key Pair - Add name and Select the type
