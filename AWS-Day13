@@ -1,0 +1,2 @@
+Task: For this task, create an AMI from an existing EC2 instance named nautilus-ec2 
+Solution: EC2 instance - Actions - Image and template - Create image (wait for available state)
