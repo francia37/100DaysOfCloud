@@ -1,0 +1,2 @@
+Task:  Attach the devops-volume volume to the devops-ec2 instance, make sure to set the device name to /dev/sdb while attaching the volume.
+Solution: EC2 - Select EC2 instance - Actions - Storage - Attach Volume - Select existing volume - Choose device name
