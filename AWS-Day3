@@ -1,2 +1,2 @@
-Task: create subnet
+Task: Create subnet
 Solution: Go to VPC - Virtual Private Cloud - Subnet - Create new subnet - Select vpc and add CIDR 
