@@ -1,0 +1,2 @@
+Task: Create Volume snapshot
+Solution: EC2 - Volume - Select the volume - Actions - Create a snapshot - add description - Rename if needed - Wait for the status of snapshot job to be completed
