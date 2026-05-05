@@ -1,0 +1,2 @@
+Task: Terminate an EC2 instance
+Solution: Select the EC2 instance - Instance state - Stop - then Terminate
