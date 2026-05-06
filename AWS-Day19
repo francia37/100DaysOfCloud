@@ -1,0 +1,2 @@
+Task: Attach IAM policy to IAM user
+Solution: IAM - Access management - IAM users - Select the IAM user - Permissions - Create policy - Attach policy directly
