@@ -1,0 +1,6 @@
+Task: Create ALB for EC2
+Solution:
+1) Create Target group (add EC2 as target)
+2) Create SG for ALB (allow http/https access from internet)
+3) Add inbound rule on the SG of EC2, allow SG for ALB to access http/https
+4) Create ALB, attach SG and TG
