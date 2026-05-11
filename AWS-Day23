@@ -1,0 +1,7 @@
+Task: Data Migration Between S3 Buckets Using AWS CLI
+Solution: 
+1) create a new bucket aws s3 mb s3://xfusion-sync-28831 --region us-east-1
+2) copy all files: aws s3 sync s3://xfusion-s3-3444 s3://xfusion-sync-28831
+3) check the number of files and size: aws s3 ls s3://xfusion-s3-3444 --recursive --summarize
+aws s3 ls s3://xfusion-sync-28831 --recursive --summarize
+4) aws s3 sync s3://xfusion-s3-3444 s3://xfusion-sync-28831 --dryrun (no differences)
