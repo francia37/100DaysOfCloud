@@ -1,0 +1,2 @@
+Task: Configuring an EC2 Instance as a Web Server with Nginx
+Solution: Add user data while launching the EC2 instance (#/bin/bash apt-get -y update apt-get install nginx systemctl start nginx systemctl enable nginx)
