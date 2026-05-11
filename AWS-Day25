@@ -1,0 +1,4 @@
+Task:  Setting Up an EC2 Instance and Cloudwatch
+Solution:
+1) Launch an EC2 instance
+2) Go to cloudwatch - Create Alarm - Type classic - Select metric - CPU Utilization - Add statistic and period - Configure conditions - Select SNS
