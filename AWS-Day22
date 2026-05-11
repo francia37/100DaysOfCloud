@@ -1,0 +1,12 @@
+Task: Configuring Secure SSH Access to an EC2 Instance
+Solution: 1) Create an EC2 instance (with no keypair)
+          2) Generate a key pair form the host (aws-client):
+ssh-keygen -t rsa -b 2048 -f /root/.ssh/id_rsa -N ""
+cat /root/.ssh/id_rsa.pub
+          3) Add the public key to EC2 ssh key directory:
+sudo mkdir -p /root/.ssh
+sudo vi /root/.ssh/authorized_keys
+sudo chmod 700 /root/.ssh
+sudo chmod 600 /root/.ssh/authorized_keys
+sudo chown -R root:root /root/.ssh
+          4) test by ssh -i /root/.ssh/id_rsa root@publicIP
