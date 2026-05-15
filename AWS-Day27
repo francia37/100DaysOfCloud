@@ -1,0 +1,2 @@
+Task: create a public EC2 instance
+Solution: create vpc - create subnet (publi ip auto-assigned) - create security group - launch EC2 instance - select the vpc/subnet/sg
