@@ -1,0 +1,7 @@
+Task: Establishing Secure Communication Between Public and Private VPCs via VPC Peering
+Solution: 
+- Create VPC Peer Connection (requester public - accepter private vpc)
+- Accept the request
+- Modify route table : add route - destination (the other) - then choose peer connection
+- adapt the security group 
+- test
