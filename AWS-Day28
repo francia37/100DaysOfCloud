@@ -1,0 +1,28 @@
+Task: create ECR repository and push/run a docker image
+Solution: 
+#get aws login
+aws sts get-caller-identity
+#create ecr repository
+aws ecr create-repository \
+  --repository-name xfusion-ecr \
+  --region us-east-1
+#Copy the repositoryUri — you’ll need it.
+#get the login 
+aws ecr get-login-password --region us-east-1 \
+| docker login --username AWS --password-stdin \
+000866466769.dkr.ecr.us-east-1.amazonaws.com/xfusion-ecr
+#go to the directory
+cd /root/pyapp
+# Build the image:
+docker build -t xfusion-ecr:latest .
+# Verify the image exists:
+docker images
+#Tag the Image for ECR
+docker tag xfusion-ecr:latest \
+000866466769.dkr.ecr.us-east-1.amazonaws.com/xfusion-ecr:latest
+#push
+docker push 000866466769.dkr.ecr.us-east-1.amazonaws.com/xfusion-ecr:latest
+#cheking
+aws ecr list-images \
+--repository-name xfusion-ecr \
+--region us-east-1
