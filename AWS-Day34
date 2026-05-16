@@ -1,0 +1,34 @@
+Task: create a lambda function using a CLI
+Solution: 
+LAMBDA_NAME="nautilus-lambda-cli"
+RUNTIME="python3.9"
+IAM_ROLE="lambda_execution_role"
+
+**************************************
+cat > lambda_function.py <<EOF
+def lambda_handler(event, context):
+    return {
+        "statusCode": 200,
+        "body": "Welcome to KKE AWS Labs!"
+    }
+EOF
+************************************************
+zip function.zip lambda_function.py
+*********************************************
+ROLE_ARN=$(aws iam get-role \
+  --role-name $IAM_ROLE \
+  --query "Role.Arn" \
+  --output text)
+**************************************************
+aws lambda create-function \
+  --function-name $LAMBDA_NAME \
+  --runtime $RUNTIME \
+  --role "$ROLE_ARN" \
+  --handler lambda_function.lambda_handler \
+  --zip-file fileb://function.zip
+*****************************************************
+aws lambda invoke \
+  --function-name $LAMBDA_NAME \
+  output.json
+************************************************************
+cat output.json
