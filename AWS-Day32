@@ -1,0 +1,26 @@
+Task: Snapshot and Restoration of an RDS Instance
+Solution:
+1) Go to Aurora RD - Database - Select database - Take snapshot
+2) Go to snapshot - Restore - Select db type - save
+wait until it's available
+
+SOURCE_RDS_NAME="devops-rds"
+SNAPSHOT_NAME="devops-snapshot"
+RDS_NAME="devops-snapshot-restore"
+INSTANCE_TYPE="db.t3.micro"
+*******************************************
+aws rds create-db-snapshot \
+  --db-instance-identifier $SOURCE_RDS_NAME \
+  --db-snapshot-identifier $SNAPSHOT_NAME
+********************************
+aws rds wait db-snapshot-available \
+  --db-snapshot-identifier $SNAPSHOT_NAME
+**************************************
+aws rds restore-db-instance-from-db-snapshot \
+  --db-instance-identifier $RDS_NAME \
+  --db-snapshot-identifier $SNAPSHOT_NAME \
+  --db-instance-class $INSTANCE_TYPE \
+  --no-publicly-accessible
+*********************************
+aws rds wait db-instance-available \
+  --db-instance-identifier $RDS_NAME
