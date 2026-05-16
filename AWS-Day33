@@ -1,0 +1,6 @@
+Task: create a lambda function
+Solution: 
+1) create IAM role for lambda with the permission AWSLambdaBasicExecutionRole
+2) Create lambda function, choose python, choose the IAM role on additional settings
+3) Go to Code, change to : def lambda_handler(event, context): return { "statusCode": 200, "body": "Welcome to KKE AWS Labs!" }
+4) Go to Test, create a test event and check
